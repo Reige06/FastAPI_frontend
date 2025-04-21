@@ -3,7 +3,7 @@ import "./index.css";
 import profile from "./assets/Images/3.png";
 import axios from "axios";
 
-const API_URL = "https://bongo-todolistapp-backend.onrender.com/api/todos/"
+const API_URL = "https://fastapi-backend-f2k4.onrender.com/api/todos/"
 
 function App() {
   const [task, setTask] = useState([]);
