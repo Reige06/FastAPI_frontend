@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Side (Profile) */
+.profile-container {
+  width: 25%;
+  padding: 30px;
+  background: #7ccbe4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 5px solid #007bff;
+}
+
+.profile-container h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Right Side (Tasks) */
+.tasks-container {
+  width: 75%;
+  padding: 30px;
+  background: #dcf2f8;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tasks-container .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.tasks-container .header h1 {
+  margin-bottom: 2em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+.filters button {
+  margin: 1em;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 0em 2em;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  margin: 5px 0;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.task-list li:hover {
+  background: #e9ecef;
+}
+
+.task-list .task-content {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 60%;
+}
+
+.task-list .task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-list .pending {
+  background: #ffeb3b;
+}
+
+.task-list .completed {
+  background: #28a745;
+  text-decoration: line-through;
+  color: white;
+}
+
+.task-left {
+  display: flex;
+}
+
+/* Dark Mode */
+.app-container.dark {
+  background: #121212;
+}
+
+.app-container.dark .tasks-container {
+  background: #222;
+  color: white;
+}
+
+.app-container.dark .profile-container {
+  background: #333;
+  color: white;
+  box-shadow: none;
+}
+
+.app-container.dark .task-list li {
+  background: #444;
+  color: white;
+}
+
+.app-container.dark .task-list li.completed {
+  background: #1e7e34;
+}
+
+.toggle-btn {
+  background: #444;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+  height: 40px;
+}
+
+.app-container.dark .toggle-btn {
+  background: white;
+  color: black;
+}
+
+.toggle-btn:hover {
+  opacity: 0.8;
+}
